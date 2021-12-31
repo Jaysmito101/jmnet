@@ -23,7 +23,8 @@
 
 # Docs : 
 ### For Help join our discord server : https://discord.gg/3h5S2cSbm8
-### https://github.com/Jaysmito101/jmnet/wiki
+
+The documentation is in the source of the file
 
 # Getting Started
 
@@ -52,7 +53,7 @@ Lastly after everything is done you need to do clean up.
 
 ### Create a Server
 
-    net::TCPServer server(80);
+    jnet::TCPServer server(80);
     server.Listen();
     jmnet::Socket* client = server.Accept();
     std::string data = "Hello!";
