@@ -1,6 +1,6 @@
 <br/>
 <p align="center">
-    <img src="https://github.com/Jaysmito101/jmnet/blob/master/recources/ReadmeHeader.png?raw=true" border="0"></
+    <img src="https://github.com/Jaysmito101/jmnet/blob/main/resources/ReadmeHeader.png?raw=true" border="0"></
 </p>
 
 <br/>
@@ -31,32 +31,32 @@ Download `jmnet.hpp`
 
 Include it in your cpp file : 
 
-  #define JMNET_IMPLEMENTATION
-  #include "jmnet.hpp"
+    #define JMNET_IMPLEMENTATION
+    #include "jmnet.hpp"
 
 Then you need to initialize jmnet using : 
 
-  jmnet::Initiaize();
+    jmnet::Initiaize();
 
 Lastly after everything is done you need to do clean up.
 
-  jmnet::Shutdown();
+    jmnet::Shutdown();
 
 ### Connecting to a server
 
-  jmnet::TCPClient client; // Create the client
-  client.Connect(jmnet::Address("example.com", 80));
-  char data[4096];
-  client.Receive(data, sizeof(data));
-  std::cout << "Data : \n" << data << std::endl;
+    jmnet::TCPClient client; // Create the client
+    client.Connect(jmnet::Address("example.com", 80));
+    char data[4096];
+    client.Receive(data, sizeof(data));
+    std::cout << "Data : \n" << data << std::endl;
 
 ### Create a Server
 
-  jmnet::TCPServer server(80);
-  server.Listen();
-  jmnet::Socket* client = server.Accept();
-  std::string data = "Hello!";
-  client->Send(data);
+    net::TCPServer server(80);
+    server.Listen();
+    jmnet::Socket* client = server.Accept();
+    std::string data = "Hello!";
+    client->Send(data);
 
 
 # Support
